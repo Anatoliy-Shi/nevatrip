@@ -1,0 +1,248 @@
+@import "../style/variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+section {
+  width: 341px;
+  margin: 0 auto 30px;
+  border: 0.3px solid #828282;
+  border-radius: 16px;
+  @media only screen and (min-width: 1083px) {
+    width: 1070px;
+    height: 370px;
+    display: flex;
+  }
+
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  @media only screen and (min-width: 1083px) {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 34px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  @media only screen and (min-width: 1083px) {
+    margin: 0;
+  }
+
+  &__img {
+    width: 16px;
+    height: 16px;
+    margin-right: 9px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9E9E9E;
+    @media only screen and (min-width: 1083px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.picture {
+  position: relative;
+  overflow: hidden;
+  width: 341px;
+  height: 220px;
+  @media only screen and (min-width: 1083px) {
+    width: 473px;
+    height: 370px;
+    overflow: unset;
+  }
+
+  &__img {
+    width: 341px;
+    height: 230px;
+    border-radius: 16px 16px 0 0;
+    @media only screen and (min-width: 1083px) {
+      width: 473px;
+      height: 370px;
+      border-radius: 0 0 0 16px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    width: 99px;
+    height: 35px;
+    background: #FED74B;
+    top: 40px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container {
+  margin: 0 12px 19px;
+  &__reverse{
+    @media only screen and (min-width: 1083px) {
+      display: flex;
+      flex-direction: column-reverse;
+
+    }
+  }
+}
+
+button {
+  width: 193px;
+  height: 44px;
+  background: #FED74B;
+  border: 0.5px solid #CBA500;
+  border-radius: 10px;
+}
+
+.list {
+  margin-left: 49px;
+  @media only screen and (min-width: 1083px) {
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+
+  &__items {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4B4B4B;
+    margin-bottom: 10px;
+    position: relative;
+    @media only screen and (min-width: 1083px) {
+      font-size: 18px;
+    }
+
+    &:before {
+      position: absolute;
+      content: url("../../../../public/check-mark.svg");
+      left: -45px;
+      @media only screen and (min-width: 1083px) {
+        left: -25px;
+      }
+    }
+  }
+}
+
+.times {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.time {
+  margin-right: 3px;
+  margin-bottom: 7px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #343434;
+  width: 63px;
+  height: 24px;
+  left: 65px;
+  top: 1208px;
+  background: #D9E8FF;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (min-width: 1083px) {
+    font-size: 18px;
+    width: 73px;
+    height: 28px;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+
+  &:active {
+    color: white;
+    background: #6BA6FF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover {
+    color: white;
+    background: #6BA6FF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+}
+
+.price {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (min-width: 1083px) {
+    justify-content: flex-start;
+    margin-right: 18px;
+    margin-top: 24px;
+  }
+
+  &__cost {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 20px;
+    @media only screen and (min-width: 1083px) {
+      font-size: 36px;
+    }
+
+    &:after {
+      content: ' \20BD';
+    }
+
+    &-pier {
+      margin-top: 8px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 20px;
+      @media only screen and (min-width: 1083px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__info {
+    width: 165px;
+    height: 44px;
+    background: #FED74B;
+    border: 0.5px solid #CBA500;
+    border-radius: 20px;
+    @media only screen and (min-width: 1083px) {
+      font-size: 18px;
+      margin-left: 18px;
+      width: 187px;
+      height: 52px;
+    }
+    &:hover {
+      background-color: #CBA500;
+      cursor: pointer;
+    }
+  }
+}
+
+.color {
+  background: #099CE8;
+  color: white;
+}
+
+
